@@ -1,0 +1,89 @@
+<template>
+  <form @submit.prevent="login">
+    <div class="login">
+      <label for="email">Login</label>
+      <input type="text" placeholder="Email" v-model="email" />
+      <label for="password">Password</label>
+      <input type="text" placeholder="Password" v-model="password"/>
+      <a href="#">Forgot Password ?</a>
+      <button type="submit">login</button>
+    </div>
+    <div v-if="message" class="alertMessage">
+        {{ message }}
+    </div>
+  </form>
+</template>
+<script>
+export default{
+  name: 'Login',
+
+  data(){
+    return{
+      email: '',
+      password: ''
+    }
+  },
+    methods: {
+      login(){
+        this.$store.dispatch('login', {
+          email: this.email,
+          password: this.password
+        });
+        this.$router.push('/');
+      }
+    }
+}
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+form {
+  width: 100%;
+  background: rgb(27, 95, 143);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+}
+.login{
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  flex-direction: column;
+  background: white;
+  padding: 25px;
+  min-height: 150px;
+  width: 50%;
+}
+
+.login label{
+  font-size: 24px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+}
+.login input{
+  height: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  margin-inline:auto ;
+}
+.login a{
+  margin-bottom: 10px;
+  margin-inline: auto;
+  font-size: 16px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-decoration: none;
+  color: blue;
+}
+.login button{
+  padding: 10px;
+  width: 25%;
+  margin-inline:auto ;
+  border-radius: 25px;
+  border: 0.5px solid grey;
+}
+
+</style>
