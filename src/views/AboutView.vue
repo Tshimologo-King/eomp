@@ -66,7 +66,7 @@ export default {
   justify-content: flex-end;
    align-content: center;
   overflow: hidden;
-  background-image: url(../assets/F_and_G.jpg);
+  background-image: url(../assets/Gas_Station.jpg);
   background-size: cover;
   /* background: linear-gradient(227deg, rgba(2,0,36,1) 0%, rgba(41,186,126,1) 35%, rgba(211,14,210,1) 70%, rgba(0,212,255,1) 100%); */
 }
@@ -75,11 +75,15 @@ export default {
   flex-direction: row;
 }
 
+.content{
+  display:flex;
+  margin-inline: auto;
+}
+
 
 .content .card{
   display: flex;
   width: 250px;
-  flex-direction: column;
   height: 250px;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0);
@@ -90,7 +94,7 @@ export default {
   border: 0.1px solid rgba(255, 255, 255, 0.19);
   margin: 15px;
   padding: 15px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .content .card:hover {

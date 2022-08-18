@@ -33,16 +33,16 @@
 </template>
 
 <script>
-export default {
-  name: "nav",
-  methods: {
-    logout() {
-      localStorage.removeItem("token");
-      this.$store.dispatch("user", null);
-      this.$router.push("/");
-    },
-  },
-};
+// export default {
+//   name: "nav",
+//   methods: {
+//     logout() {
+//       localStorage.removeItem("token");
+//       this.$store.dispatch("user", null);
+//       this.$router.push("/");
+//     },
+//   },
+// };
 </script>
 
 <style scoped>
