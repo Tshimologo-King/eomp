@@ -33,6 +33,7 @@ export default createStore({
     login: async (context, payload) => {
       const { email, password } = payload;
       fetch("https://node-eom-2.herokuapp.com/users/login", {
+        mode: "cors",
         method: "POST",
         body: JSON.stringify({
           email: email,
@@ -42,8 +43,8 @@ export default createStore({
           "Content-type": "application/json; charset=UTF-8",
         },
       })
-      .then((response) => response.json())
-      .then((json) => context.commit("user", data[0]));
+        .then((response) => response.json())
+        .then((json) => context.commit("user", data[0]));
     },
     // takes in user input and sends a post request to the server/database and adds all user data
     register: async (context, payload) => {

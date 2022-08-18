@@ -1,5 +1,6 @@
 <template>
-  <form @submit.prevent="login">
+  <div class="container">
+    <form @submit.prevent="login">
     <div class="login">
       <label for="email">Login</label>
       <input type="text" placeholder="Email" v-model="email" />
@@ -12,6 +13,7 @@
         {{ message }}
     </div>
   </form>
+  </div>
 </template>
 <script>
 export default{
@@ -37,6 +39,10 @@ export default{
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+.container{
+  overflow: hidden;
+}
+
 form {
   width: 100%;
   background: rgb(27, 95, 143);

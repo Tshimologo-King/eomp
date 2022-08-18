@@ -26,7 +26,7 @@
           Sign Up</router-link>
       </li>
       <li><router-link to="/" :click="logout">Logout</router-link></li>
-      <li><router-link to="/adminDashboard"> admin </router-link></li>
+      <li><router-link to="/adminDashboard"> Admin </router-link></li>
     </ul>
   </nav>
   </div>

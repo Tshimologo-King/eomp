@@ -1,5 +1,6 @@
 <template>
-  <form @submit.prevent="sign_up">
+  <div class="container">
+    <form @submit.prevent="sign_up">
     <div id="register">
       <h2>User Information</h2>
       <div v-if="!successful">
@@ -30,6 +31,7 @@
       </div>
     </div>
   </form>
+  </div>
 </template>
 
 <script>
@@ -57,6 +59,10 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  overflow: hidden;
+}
+
 #register {
   display: flex;
   justify-content: center;
